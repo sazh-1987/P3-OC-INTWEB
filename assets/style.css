@@ -1,0 +1,52 @@
+/** general **/
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --white-color: #F3F3F3;
+  --light-green: #99E2D0;
+  --dark-green: #008766;
+  --light-blue: #89C8FA;
+  --dark-blue: #003A68;
+  --purple: #9356DC;
+  --background-grey: #EAEAEA;
+}
+
+body {
+  margin: 0;
+}
+
+.main-container {
+  min-width: 375px;
+}
+
+img {
+  max-width: 375px;
+}
+
+/* ***************************************** */
+/** header **/
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+header a {
+  height: 63px;
+  display: flex;
+  align-items: center;
+}
+header a img {
+  width: 162px;
+  height: 44px;
+}
+header div {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background: var(--background-grey);
+  width: 100%;
+  justify-content: center;
+  gap: 10px;
+}/*# sourceMappingURL=style.css.map */
