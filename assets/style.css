@@ -17,7 +17,7 @@
   --background-footer: #353535;
 }
 
-body {
+body, h1, h2, h3 {
   margin: 0;
   font-family: "Roboto", serif;
   font-optical-sizing: auto;
@@ -25,7 +25,7 @@ body {
   font-style: normal;
 }
 
-h1, h2, h3, h4 {
+h4 {
   margin: 0;
   font-family: "Shrikhand", serif;
   font-weight: 400;
@@ -209,6 +209,13 @@ header div {
     height: 228px;
   }
 }
+.h2fonctionnement h2 {
+  font-weight: 700;
+}
+.h2fonctionnement h3 {
+  color: var(--black-color);
+  font-weight: 500;
+}
 .h2fonctionnement .fonctionnement {
   display: flex;
   align-items: center;
@@ -225,6 +232,9 @@ header div {
 .h2fonctionnement .fonctionnement a {
   width: 100%;
   text-decoration: none;
+}
+.h2fonctionnement .fa-mobile-screen-button, .h2fonctionnement .fa-list-ul {
+  color: #7E7E7E;
 }
 .h2fonctionnement .fonctionnement__button {
   display: flex;
@@ -311,6 +321,7 @@ header div {
   top: 7%;
 }
 .h2-resto .restaurants .info-resto {
+  color: var(--black-color);
   display: grid;
   grid-template-columns: 90% 10%;
   grid-template-rows: 25% 30%;
@@ -320,8 +331,12 @@ header div {
   grid-row: 2/3;
   left: -30px;
 }
+.h2-resto .restaurants .info-resto h3 {
+  font-weight: 700;
+}
 .h2-resto .restaurants .info-resto p {
   grid-column: 1/2;
+  font-weight: 300;
 }
 
 footer {
@@ -425,6 +440,64 @@ footer ul i {
   text-transform: uppercase;
 }
 
+@keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.carte--1 {
+  transform: opacity 0;
+  animation: apparition 1000ms 0ms both;
+}
+
+.carte--2 {
+  transform: opacity 0;
+  animation: apparition 2000ms 0ms both;
+}
+
+.carte--3 {
+  transform: opacity 0;
+  animation: apparition 3000ms 0ms both;
+}
+
+.carte--4 {
+  transform: opacity 0;
+  animation: apparition 4000ms 0ms both;
+}
+
+.carte--5 {
+  transform: opacity 0;
+  animation: apparition 5000ms 0ms both;
+}
+
+.carte--6 {
+  transform: opacity 0;
+  animation: apparition 6000ms 0ms both;
+}
+
+.carte--7 {
+  transform: opacity 0;
+  animation: apparition 7000ms 0ms both;
+}
+
+.carte--8 {
+  transform: opacity 0;
+  animation: apparition 8000ms 0ms both;
+}
+
+.carte--9 {
+  transform: opacity 0;
+  animation: apparition 9000ms 0ms both;
+}
+
+.carte--10 {
+  transform: opacity 0;
+  animation: apparition 10000ms 0ms both;
+}
+
 .carte__description {
   background: var(--white-color);
   border-radius: 20px;
@@ -442,7 +515,6 @@ footer ul i {
 .carte__description .plat_acc {
   transform: translateX(0%);
   margin-left: 5%;
-  border: solid 1px red;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -463,10 +535,9 @@ footer ul i {
 .carte__description .prix_valide {
   background: #99E2D0;
   width: 30%;
-  border-left: solid 1px #FFFFFF;
-  border: solid 1px red;
+  border-left: solid -3px #FFFFFF;
   transform: translateX(50%);
-  transition: all 1000ms;
+  transition: transform 1000ms;
 }
 .carte__description .prix_valide .valide {
   width: 50%;
@@ -482,13 +553,16 @@ footer ul i {
   background: var(--white-color);
   border-left: solid 1px #FFFFFF;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  align-items: last baseline;
 }
 .carte__description .prix_valide i {
   transform: rotate(280deg);
   transition: transform 1000ms ease-in-out 100ms;
   color: var(--white-color);
   font-weight: 600;
+  display: flex;
+  flex-direction: row;
 }
 .carte__description:hover .valide {
   background: var(--light-green);
