@@ -69,8 +69,13 @@ h4 {
   opacity: 0;
   transition: all 500ms ease-in-out;
 }
-.coeur .fa-solid:hover {
+.coeur .fa-solid:active {
   opacity: 1;
+}
+@media screen and (min-width: 1024px) {
+  .coeur .fa-solid:hover {
+    opacity: 1;
+  }
 }
 
 /** fin coeur **/
@@ -194,9 +199,15 @@ header div {
   width: 218px;
   height: 50px;
 }
-.title a:hover {
+.title a:active {
   background: #bc95e9;
   box-shadow: 0 4px 15px 0 black;
+}
+@media screen and (min-width: 1024px) {
+  .title a:hover {
+    background: #bc95e9;
+    box-shadow: 0 4px 15px 0 black;
+  }
 }
 
 .h2fonctionnement {
@@ -560,16 +571,29 @@ footer ul i {
   display: flex;
   flex-direction: row;
 }
-.carte__description:hover .valide {
+.carte__description:active .valide {
   background: var(--light-green);
 }
-.carte__description:hover .prix_valide {
+.carte__description:active .prix_valide {
   display: flex;
   flex-direction: row;
   transform: translateX(0);
 }
-.carte__description:hover i {
+.carte__description:active i {
   transform: rotate(0);
+}
+@media screen and (min-width: 1024px) {
+  .carte__description:hover .valide {
+    background: var(--light-green);
+  }
+  .carte__description:hover .prix_valide {
+    display: flex;
+    flex-direction: row;
+    transform: translateX(0);
+  }
+  .carte__description:hover i {
+    transform: rotate(0);
+  }
 }
 
 .commander {
@@ -587,7 +611,13 @@ footer ul i {
   justify-content: center;
   margin: auto;
 }
-.commander:hover {
+.commander:active {
   background: #bc95e9;
   box-shadow: 0 4px 15px 0 black;
+}
+@media screen and (min-width: 1024px) {
+  .commander:hover {
+    background: #bc95e9;
+    box-shadow: 0 4px 15px 0 black;
+  }
 }/*# sourceMappingURL=style.css.map */

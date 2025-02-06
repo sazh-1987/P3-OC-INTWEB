@@ -90,10 +90,15 @@ h4{
     position: absolute;
     opacity: 0;
     transition: all 500ms ease-in-out;
-    &:hover{
-        opacity: 1;
+        &:active{
+            opacity: 1;
+            }
+        &:hover{
+            @media screen and (min-width: 1024px){
+                opacity: 1;
+            }
         }
-    }
+    }   
 }
 /** fin coeur **/
 
@@ -207,8 +212,13 @@ flex-direction: column;
         @include btn;
         width: 218px;
         height: 50px;
-        &:hover{
+        &:active{
         @include survol-btn;
+        }
+        &:hover{
+            @media screen and (min-width: 1024px){
+                @include survol-btn;
+            }
         }
     }
 }
@@ -511,7 +521,7 @@ footer{
         }
     }
 
-    &:hover{
+    &:active{
         .valide{
             background: var(--light-green);
         }
@@ -524,6 +534,22 @@ footer{
             transform: rotate(0);
         }
     }
+    &:hover{
+        @media screen and (min-width: 1024px) {
+            .valide{
+                background: var(--light-green);
+            }
+            .prix_valide{ 
+                display: flex;
+                flex-direction: row;
+                transform: translateX(0);
+            }
+            i{
+                transform: rotate(0);
+            }
+        } 
+    }
+    
 }
 
 .commander{
@@ -534,8 +560,12 @@ footer{
     align-content: center;
     justify-content: center;
     margin: auto; 
-    &:hover{
+    &:active{
         @include survol-btn;
     }
+    &:hover{
+        @media screen and (min-width: 1024px){
+            @include survol-btn;
+        }
+    }
 }
-
