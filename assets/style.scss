@@ -1,3 +1,4 @@
+
 /** general **/
 *{
     box-sizing: border-box;
@@ -20,7 +21,6 @@
 body, h1, h2, h3{
     margin: 0;
     font-family: "Roboto", serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
@@ -45,8 +45,8 @@ h4{
     width: 84%;
     @media screen and (max-width: 768px){
         width: 75%;
+    }
 }
-
 
 
 /** debut animation et transition **/
@@ -133,10 +133,10 @@ h4{
         transform: scale(1);
     }
     25%{
-        transform: scale (0.8);
+        transform: scale(0.9);
     }
     75%{
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
     100%{
         transform: scale(1);
@@ -427,35 +427,23 @@ footer{
     h3{
         width: 50%;
         font-family: "Roboto", serif;
-        font-optical-sizing: auto;
         font-weight: 300;
         font-style: normal;
         text-transform : uppercase;
     }
 }
 @keyframes apparition {
-    0%{
-        opacity: 0;
-    }
-    100%{
+    to{
         opacity: 1;
     }
 }
 
 @for $i from 1 through 10 {
     .carte--#{$i} {
-    transform: opacity (0);
+    opacity: 0;
     animation: apparition 1000ms*$i 0ms both;
     }
 }
-
-
-
-
-
-
-
-
 
 .carte__description{
     background:  var(--white-color);
@@ -494,7 +482,6 @@ footer{
     .prix_valide{
         background: #99E2D0;
         width: 30%;
-        border-left: solid -3px #FFFFFF;
         transform: translateX(50%);
         transition: transform 1000ms;
         .valide{
@@ -551,3 +538,4 @@ footer{
         @include survol-btn;
     }
 }
+
