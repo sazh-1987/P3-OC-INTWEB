@@ -526,6 +526,7 @@ footer ul i {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  display: inline-block;
 }
 .carte__description .plat_acc .plat, .carte__description .plat_acc .accompagnement {
   height: 50%;
@@ -543,8 +544,9 @@ footer ul i {
 .carte__description .prix_valide {
   background: #99E2D0;
   width: 30%;
-  transform: translateX(50%);
-  transition: transform 1000ms;
+  transition: all 1000ms;
+  display: inline-block;
+  margin-right: -15%;
 }
 .carte__description .prix_valide .valide {
   width: 50%;
@@ -577,7 +579,7 @@ footer ul i {
 .carte__description:active .prix_valide {
   display: flex;
   flex-direction: row;
-  transform: translateX(0);
+  margin-right: 0;
 }
 .carte__description:active i {
   transform: rotate(0);
@@ -590,6 +592,7 @@ footer ul i {
     display: flex;
     flex-direction: row;
     transform: translateX(0);
+    margin-right: 0;
   }
   .carte__description:hover i {
     transform: rotate(0);
