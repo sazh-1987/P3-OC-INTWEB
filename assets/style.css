@@ -516,30 +516,22 @@ footer ul i {
   overflow: hidden;
   display: flex;
   justify-content: space-between;
-  text-overflow: ellipsis;
-  overflow: hidden;
   white-space: nowrap;
 }
 .carte__description .plat_acc {
   transform: translateX(0%);
   margin-left: 5%;
-  text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap;
   display: inline-block;
 }
 .carte__description .plat_acc .plat, .carte__description .plat_acc .accompagnement {
   height: 50%;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
 }
 .carte__description p {
   margin: 0;
   line-height: 36px;
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap;
 }
 .carte__description .prix_valide {
   background: #99E2D0;
@@ -591,7 +583,6 @@ footer ul i {
   .carte__description:hover .prix_valide {
     display: flex;
     flex-direction: row;
-    transform: translateX(0);
     margin-right: 0;
   }
   .carte__description:hover i {

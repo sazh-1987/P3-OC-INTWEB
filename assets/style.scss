@@ -465,22 +465,15 @@ footer{
     overflow: hidden;
     display: flex;
     justify-content: space-between;
-    text-overflow: ellipsis;
-    overflow: hidden;
     white-space: nowrap;
 
     .plat_acc{
         transform: translateX(0%);
         margin-left: 5%;
-        text-overflow: ellipsis;
         overflow: hidden;
-        white-space: nowrap;
         display: inline-block;
         .plat, .accompagnement{
             height: 50%;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
         }
     }
     p{
@@ -488,7 +481,6 @@ footer{
         line-height: 36px;
         text-overflow: ellipsis;
         overflow: hidden;
-        white-space: nowrap;
     }
     .prix_valide{
         background: #99E2D0;
@@ -544,7 +536,6 @@ footer{
             .prix_valide{ 
                 display: flex;
                 flex-direction: row;
-                transform: translateX(0);
                 margin-right: 0;
             }
             i{
