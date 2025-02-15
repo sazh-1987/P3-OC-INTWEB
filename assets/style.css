@@ -69,13 +69,8 @@ h4 {
   opacity: 0;
   transition: all 500ms ease-in-out;
 }
-.coeur .fa-solid:active {
+.coeur .fa-solid:hover {
   opacity: 1;
-}
-@media screen and (min-width: 1024px) {
-  .coeur .fa-solid:hover {
-    opacity: 1;
-  }
 }
 
 /** fin coeur **/
@@ -167,21 +162,27 @@ header div {
   gap: 10px;
   box-shadow: 0px 4px 4px 0px black;
 }
+header div p {
+  font-weight: 500;
+}
 
 .title {
   height: 287px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   background: var(--light-grey);
   text-align: center;
+  padding: 6% 0 11% 0;
 }
 .title h1 {
   width: 70%;
+  font-weight: 700;
 }
 .title > p {
   width: 84%;
+  font-weight: 300;
 }
 @media screen and (min-width: 768px) {
   .title > p {
@@ -195,19 +196,15 @@ header div {
   font-weight: 500;
   color: var(--white-color);
   text-decoration: none;
+  opacity: 1;
   transition: all 500ms ease-in-out;
   width: 218px;
   height: 50px;
+  font-weight: 500;
 }
-.title a:active {
-  background: #bc95e9;
+.title a:hover {
+  opacity: 0.85;
   box-shadow: 0 4px 15px 0 black;
-}
-@media screen and (min-width: 1024px) {
-  .title a:hover {
-    background: #bc95e9;
-    box-shadow: 0 4px 15px 0 black;
-  }
 }
 
 .h2fonctionnement {
@@ -223,6 +220,7 @@ header div {
 }
 .h2fonctionnement h2 {
   font-weight: 700;
+  margin-left: -3%;
 }
 .h2fonctionnement h3 {
   color: var(--black-color);
@@ -244,6 +242,7 @@ header div {
 .h2fonctionnement .fonctionnement a {
   width: 100%;
   text-decoration: none;
+  font-size: 14px;
 }
 .h2fonctionnement .fa-mobile-screen-button, .h2fonctionnement .fa-list-ul {
   color: #7E7E7E;
@@ -254,6 +253,7 @@ header div {
   flex-direction: row;
   justify-content: center;
   gap: 20px;
+  box-shadow: 0 4px 15px 0 black;
   background: var(--background-light-grey);
   border-radius: 20px;
   height: 72px;
@@ -283,6 +283,10 @@ header div {
   justify-content: space-around;
   padding: 40px 0;
 }
+.h2-resto h2 {
+  margin-left: 1%;
+  font-weight: 700;
+}
 .h2-resto img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -306,12 +310,13 @@ header div {
   }
 }
 .h2-resto .restaurants a {
-  height: 240px;
+  height: 250px;
   width: 100%;
   background: var(--white-color);
-  border-radius: 15px 15px 0 0;
+  border-radius: 15px;
   position: relative;
   text-decoration: none;
+  box-shadow: 0 4px 15px 0 black;
 }
 @media screen and (min-width: 768px) {
   .h2-resto .restaurants a {
@@ -319,7 +324,7 @@ header div {
   }
 }
 .h2-resto .restaurants .nouveau::before {
-  content: "nouveau";
+  content: "Nouveau";
   width: 80px;
   height: 29px;
   text-align: center;
@@ -334,9 +339,10 @@ header div {
 }
 .h2-resto .restaurants .info-resto {
   color: var(--black-color);
+  padding-top: 1.5%;
   display: grid;
   grid-template-columns: 90% 10%;
-  grid-template-rows: 25% 30%;
+  grid-template-rows: 10% 30%;
 }
 .h2-resto .restaurants .info-resto .coeur {
   grid-column: 2/3;
@@ -345,10 +351,13 @@ header div {
 }
 .h2-resto .restaurants .info-resto h3 {
   font-weight: 700;
+  margin-left: 3%;
 }
 .h2-resto .restaurants .info-resto p {
   grid-column: 1/2;
   font-weight: 300;
+  margin-left: 3%;
+  font-size: 17px;
 }
 
 footer {
@@ -389,7 +398,7 @@ footer ul li:nth-child(-n+2) {
   font-weight: 500;
 }
 footer ul i {
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
 /** carte restaurant **/
@@ -437,6 +446,11 @@ footer ul i {
   display: flex;
   align-items: center;
   width: 93%;
+}
+.conteneur-menu .menu h2 {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .conteneur-menu .menu__carte {
   display: flex;
@@ -517,6 +531,7 @@ footer ul i {
   display: flex;
   justify-content: space-between;
   white-space: nowrap;
+  box-shadow: 0 4px 15px 0 black;
 }
 .carte__description .plat_acc {
   transform: translateX(0%);
@@ -524,8 +539,15 @@ footer ul i {
   overflow: hidden;
   display: inline-block;
 }
-.carte__description .plat_acc .plat, .carte__description .plat_acc .accompagnement {
+.carte__description .plat_acc .accompagnement {
+  font-weight: 300;
   height: 50%;
+  line-height: 150%;
+}
+.carte__description .plat_acc .plat {
+  font-weight: 500;
+  height: 50%;
+  line-height: 300%;
 }
 .carte__description p {
   margin: 0;
@@ -551,11 +573,13 @@ footer ul i {
 .carte__description .prix_valide .prix {
   width: 50%;
   height: 100%;
+  line-height: 300%;
   background: var(--white-color);
   border-left: solid 1px #FFFFFF;
   display: flex;
   justify-content: center;
   align-items: last baseline;
+  font-weight: 700;
 }
 .carte__description .prix_valide i {
   transform: rotate(280deg);
@@ -565,29 +589,16 @@ footer ul i {
   display: flex;
   flex-direction: row;
 }
-.carte__description:active .valide {
+.carte__description:hover .valide {
   background: var(--light-green);
 }
-.carte__description:active .prix_valide {
+.carte__description:hover .prix_valide {
   display: flex;
   flex-direction: row;
   margin-right: 0;
 }
-.carte__description:active i {
+.carte__description:hover i {
   transform: rotate(0);
-}
-@media screen and (min-width: 1024px) {
-  .carte__description:hover .valide {
-    background: var(--light-green);
-  }
-  .carte__description:hover .prix_valide {
-    display: flex;
-    flex-direction: row;
-    margin-right: 0;
-  }
-  .carte__description:hover i {
-    transform: rotate(0);
-  }
 }
 
 .commander {
@@ -597,6 +608,7 @@ footer ul i {
   font-weight: 500;
   color: var(--white-color);
   text-decoration: none;
+  opacity: 1;
   transition: all 500ms ease-in-out;
   width: 186px;
   height: 50px;
@@ -605,13 +617,7 @@ footer ul i {
   justify-content: center;
   margin: auto;
 }
-.commander:active {
-  background: #bc95e9;
+.commander:hover {
+  opacity: 0.85;
   box-shadow: 0 4px 15px 0 black;
-}
-@media screen and (min-width: 1024px) {
-  .commander:hover {
-    background: #bc95e9;
-    box-shadow: 0 4px 15px 0 black;
-  }
 }/*# sourceMappingURL=style.css.map */

@@ -62,11 +62,12 @@ h4{
     font-weight: 500;
     color: var(--white-color);
     text-decoration: none;
+    opacity: 1;
     transition: all 500ms ease-in-out;
 }
 
 @mixin survol-btn{
-    background: lighten(#9356DC, 15%);
+    opacity: 0.85;
     box-shadow: 0 4px 15px 0 darken(#000000, 35%);
 }
 /** fin mixin bouton et survol**/
@@ -90,13 +91,8 @@ h4{
     position: absolute;
     opacity: 0;
     transition: all 500ms ease-in-out;
-        &:active{
-            opacity: 1;
-            }
         &:hover{
-            @media screen and (min-width: 1024px){
-                opacity: 1;
-            }
+            opacity: 1;
         }
     }   
 }
@@ -188,6 +184,9 @@ flex-direction: column;
         justify-content: center;
         gap: 10px;
         box-shadow: 0px 4px 4px 0px darken(#000000, 25%);
+        p{
+            font-weight: 500;
+        }
     }
 }
 
@@ -195,14 +194,17 @@ flex-direction: column;
     height: 287px;
     @include flex-align-center;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     background: var(--light-grey);
     text-align: center;
+    padding: 6% 0 11% 0;
     h1{
         width: 70%;
+        font-weight: 700;
     }
     &>p{
     width: 84%;
+    font-weight: 300;
     @media screen and (min-width: 768px){
         width: 100%;
     }
@@ -212,13 +214,9 @@ flex-direction: column;
         @include btn;
         width: 218px;
         height: 50px;
-        &:active{
-        @include survol-btn;
-        }
+        font-weight: 500;
         &:hover{
-            @media screen and (min-width: 1024px){
-                @include survol-btn;
-            }
+        @include survol-btn;
         }
     }
 }
@@ -232,6 +230,7 @@ flex-direction: column;
     }
     h2{
         font-weight: 700;
+        margin-left: -3%;
     }
     h3{
         color: var(--black-color);
@@ -249,6 +248,7 @@ flex-direction: column;
         a{
             width: 100%;
             text-decoration: none;
+            font-size: 14px;
         }
 
         }
@@ -260,6 +260,7 @@ flex-direction: column;
             flex-direction: row;
             justify-content: center;
             gap: 20px;
+            box-shadow: 0 4px 15px 0 darken(#000000, 15%);
             background: var(--background-light-grey);
             border-radius: 20px;
             height: 72px;
@@ -289,6 +290,10 @@ flex-direction: column;
     @include flex-align-center;
     justify-content: space-around;
     padding: 40px 0;
+    h2{
+        margin-left: 1%;
+        font-weight: 700;
+    }
     img{
         object-fit: cover;
         height: 180px;
@@ -307,18 +312,19 @@ flex-direction: column;
             justify-content: space-between;
         }
         a{
-            height: 240px;
+            height: 250px;
             width: 100%;
             background: var(--white-color);
-            border-radius: 15px 15px 0 0;
+            border-radius: 15px ;
             position: relative;
             text-decoration: none;
+            box-shadow: 0 4px 15px 0 darken(#000000, 10%);
             @media screen and (min-width: 768px){
                 width: 45%;                
             }
         }
         .nouveau::before{
-            content:"nouveau";
+            content:"Nouveau";
             width: 80px;
             height: 29px;
             text-align: center;
@@ -333,9 +339,10 @@ flex-direction: column;
         }
         .info-resto{
             color: var(--black-color);
+            padding-top: 1.5%;
             display: grid;
             grid-template-columns: 90% 10%;
-            grid-template-rows: 25% 30%;
+            grid-template-rows: 10% 30%;
             .coeur{
                 grid-column: 2 / 3;
                 grid-row: 2 / 3;
@@ -343,10 +350,14 @@ flex-direction: column;
             }
             h3{
                 font-weight: 700;
+                margin-left: 3%;
+                
             }
             p{
                 grid-column: 1 / 2;
                 font-weight: 300;
+                margin-left: 3%;
+                font-size: 17px;
             }
         }
     }
@@ -385,7 +396,7 @@ footer{
             font-weight: 500;
         }
         i{
-            margin-right: 15px;
+            margin-right: 10px;
         }
     } 
 }
@@ -428,6 +439,11 @@ footer{
             @include flex-align-center;
             width: 93%;
         }
+        h2{
+            font-family: "Shrikhand", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
     }  
     .menu__carte{
         display: flex;
@@ -466,14 +482,22 @@ footer{
     display: flex;
     justify-content: space-between;
     white-space: nowrap;
+    box-shadow: 0 4px 15px 0 darken(#000000, 10%);
 
     .plat_acc{
         transform: translateX(0%);
         margin-left: 5%;
         overflow: hidden;
         display: inline-block;
-        .plat, .accompagnement{
+        .accompagnement{
+            font-weight: 300;
             height: 50%;
+            line-height: 150%;
+        }
+        .plat{
+            font-weight: 500;
+            height: 50%;
+            line-height: 300%;
         }
     }
     p{
@@ -482,12 +506,13 @@ footer{
         text-overflow: ellipsis;
         overflow: hidden;
     }
+
     .prix_valide{
         background: #99E2D0;
         width: 30%;
         transition: all 1000ms;
         display: inline-block;
-        margin-right: -15%;
+        margin-right: -15%;   
         .valide{
             width: 50%;
             height: 100%;
@@ -499,11 +524,13 @@ footer{
         .prix{
             width: 50%;
             height: 100%;
+            line-height: 300%;
             background: var(--white-color);
             border-left: solid 1px #FFFFFF;
             display: flex;
             justify-content: center;
             align-items: last baseline;
+            font-weight: 700;
         }
         i{
             transform: rotate(280deg);
@@ -515,7 +542,7 @@ footer{
         }
     }
 
-    &:active{
+    &:hover{
         .valide{
             background: var(--light-green);
         }
@@ -527,23 +554,7 @@ footer{
         i{
             transform: rotate(0);
         }
-    }
-    &:hover{
-        @media screen and (min-width: 1024px) {
-            .valide{
-                background: var(--light-green);
-            }
-            .prix_valide{ 
-                display: flex;
-                flex-direction: row;
-                margin-right: 0;
-            }
-            i{
-                transform: rotate(0);
-            }
-        } 
-    }
-    
+    }   
 }
 
 .commander{
@@ -554,12 +565,7 @@ footer{
     align-content: center;
     justify-content: center;
     margin: auto; 
-    &:active{
-        @include survol-btn;
-    }
     &:hover{
-        @media screen and (min-width: 1024px){
-            @include survol-btn;
-        }
+        @include survol-btn;
     }
 }
