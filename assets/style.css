@@ -234,6 +234,9 @@ header div p {
   margin-top: 30px;
   counter-reset: numero;
 }
+.h2fonctionnement .fonctionnement:hover .fa-mobile-screen-button, .h2fonctionnement .fonctionnement:hover .fa-list-ul, .h2fonctionnement .fonctionnement:hover .fa-store {
+  color: var(--purple);
+}
 @media screen and (min-width: 1024px) {
   .h2fonctionnement .fonctionnement {
     flex-direction: row;
@@ -244,7 +247,7 @@ header div p {
   text-decoration: none;
   font-size: 14px;
 }
-.h2fonctionnement .fa-mobile-screen-button, .h2fonctionnement .fa-list-ul {
+.h2fonctionnement .fa-mobile-screen-button, .h2fonctionnement .fa-list-ul, .h2fonctionnement .fa-store {
   color: #7E7E7E;
 }
 .h2fonctionnement .fonctionnement__button {

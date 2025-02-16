@@ -242,6 +242,11 @@ flex-direction: column;
         gap: 20px;
         margin-top: 30px;
         counter-reset: numero;
+        &:hover{
+            .fa-mobile-screen-button, .fa-list-ul, .fa-store{
+                color: var(--purple);
+            }
+        }
         @media screen and (min-width: 1024px){
             flex-direction: row;
         }
@@ -252,9 +257,10 @@ flex-direction: column;
         }
 
         }
-        .fa-mobile-screen-button, .fa-list-ul{
+        .fa-mobile-screen-button, .fa-list-ul, .fa-store{
             color: #7E7E7E;
         }
+
         .fonctionnement__button{
             @include flex-align-center;
             flex-direction: row;
