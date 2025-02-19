@@ -42,7 +42,7 @@ h4{
 }
 
 .bordure-phone{
-    width: 84%;
+    width: 86%;
     @media screen and (max-width: 768px){
         width: 75%;
     }
@@ -102,6 +102,11 @@ h4{
             } 
         }      
     }
+}
+
+.positionCoeurIndex{
+    bottom: 30px;
+    right: 20px;
 }
 /** fin coeur **/
 
@@ -336,17 +341,21 @@ flex-direction: column;
             flex-wrap: wrap;
             justify-content: space-between;
         }
-        a{
+        .box{
             height: 250px;
             width: 100%;
             background: var(--white-color);
             border-radius: 15px ;
             position: relative;
-            text-decoration: none;
             box-shadow: 0 4px 15px 0 darken(#000000, 10%);
             @media screen and (min-width: 768px){
                 width: 45%;                
             }
+        a{
+            text-decoration: none;
+            height: 100%;
+            background-color: red;
+        }
         }
         .nouveau::before{
             content:"Nouveau";
@@ -365,22 +374,14 @@ flex-direction: column;
         .info-resto{
             color: var(--black-color);
             padding-top: 1.5%;
-            display: grid;
-            grid-template-columns: 90% 10%;
-            grid-template-rows: 10% 30%;
-            .coeur{
-                grid-column: 2 / 3;
-                grid-row: 2 / 3;
-                left: -30px;
-            }
+
             h3{
                 font-weight: 700;
                 margin-left: 3%;
-                
             }
             p{
-                grid-column: 1 / 2;
                 font-weight: 300;
+                margin: 0;
                 margin-left: 3%;
                 font-size: 17px;
             }
